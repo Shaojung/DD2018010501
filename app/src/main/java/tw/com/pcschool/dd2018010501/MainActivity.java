@@ -85,4 +85,30 @@ public class MainActivity extends AppCompatActivity {
         builder.setCancelable(false);
         builder.show();
     }
+    public void click4(View v)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("單選列表");
+        final String fruits[] = {"蘋果", "香蕉", "梨子"};
+        final TextView tv3 = (TextView) findViewById(R.id.textView3);
+        builder.setSingleChoiceItems(fruits, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        builder.setPositiveButton("確定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        builder.show();
+    }
 }
