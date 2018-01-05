@@ -68,13 +68,21 @@ public class MainActivity extends AppCompatActivity {
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("列表");
-        String fruits[] = {"蘋果", "香蕉", "梨子"};
+        final String fruits[] = {"蘋果", "香蕉", "梨子"};
+        final TextView tv2 = (TextView) findViewById(R.id.textView2);
         builder.setItems(fruits, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                tv2.setText(fruits[i]);
+            }
+        });
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         });
+        builder.setCancelable(false);
         builder.show();
     }
 }
