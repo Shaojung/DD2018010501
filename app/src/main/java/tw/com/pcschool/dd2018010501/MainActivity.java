@@ -10,7 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    int ch;
+    int ch = -1;
+    int tmp = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,12 +95,13 @@ public class MainActivity extends AppCompatActivity {
         builder.setSingleChoiceItems(fruits, ch, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                ch = i;
+                tmp = i;
             }
         });
         builder.setPositiveButton("確定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                ch = tmp;
                 tv3.setText(fruits[ch]);
             }
         });
