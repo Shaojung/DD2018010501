@@ -64,4 +64,17 @@ public class MainActivity extends AppCompatActivity {
         });
         builder.show();
     }
+    public void click3(View v)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("列表");
+        String fruits[] = {"蘋果", "香蕉", "梨子"};
+        builder.setItems(fruits, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        builder.show();
+    }
 }
