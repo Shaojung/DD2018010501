@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle("單選列表");
         final String fruits[] = {"蘋果", "香蕉", "梨子"};
         final TextView tv3 = (TextView) findViewById(R.id.textView3);
+        tmp = ch;
         builder.setSingleChoiceItems(fruits, ch, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
