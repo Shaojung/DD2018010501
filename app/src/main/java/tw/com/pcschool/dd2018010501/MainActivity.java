@@ -130,8 +130,16 @@ public class MainActivity extends AppCompatActivity {
 
         builder.setPositiveButton("確定", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-
+            public void onClick(DialogInterface dialogInterface, int position) {
+                StringBuilder sb = new StringBuilder();
+                for (int i=0;i<=4;i++)
+                {
+                    if (chks[i])
+                    {
+                        sb.append(fruits[i] + ",");
+                    }
+                }
+                tv4.setText(sb.toString());
             }
         });
         builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
